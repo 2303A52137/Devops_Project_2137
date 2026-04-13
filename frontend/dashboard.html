@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+
+<div class="sidebar">
+
+<h2>Planner</h2>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+
+<div class="main-content">
+
+<h1>Study Dashboard</h1>
+
+
+<div class="cards-container">
+
+<div class="stat-card">
+<h3>Total Subjects</h3>
+<p id="subjectsCount">0</p>
+</div>
+
+<div class="stat-card">
+<h3>Total Tasks</h3>
+<p id="tasksCount">0</p>
+</div>
+
+<div class="stat-card">
+<h3>Completed</h3>
+<p id="completedCount">0</p>
+</div>
+
+<div class="stat-card">
+<h3>Pending</h3>
+<p id="pendingCount">0</p>
+</div>
+
+</div>
+
+
+<!-- PROGRESS LABEL -->
+
+<h3 style="margin-top:25px">
+Progress:
+<span id="progressPercent">0%</span>
+</h3>
+
+
+<div class="progress-container">
+<div id="progressBar"></div>
+</div>
+
+
+<h2 style="margin-top:40px;">Subjects</h2>
+
+<div id="subjectsList"></div>
+
+
+<button class="floating-btn">+</button>
+
+</div>
+
+
+<!-- SUBJECT MODAL -->
+
+<div id="subjectModal" class="modal">
+
+<div class="modal-content">
+
+<h3>Add Subject</h3>
+
+<input
+id="subjectName"
+placeholder="Enter subject name"
+/>
+
+<div class="modal-buttons">
+
+<button class="modal-primary"
+onclick="addSubject()">
+Add Subject
+</button>
+
+<button class="modal-cancel"
+onclick="closeSubjectModal()">
+Cancel
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TASK MODAL -->
+
+<div id="taskModal" class="modal">
+
+<div class="modal-content">
+
+<h3>Add Task</h3>
+
+<input
+id="taskName"
+placeholder="Task name"
+/>
+
+<input
+type="date"
+id="taskDeadline"
+/>
+
+<div class="modal-buttons">
+
+<button class="modal-primary"
+onclick="saveTask()">
+Add Task
+</button>
+
+<button class="modal-cancel"
+onclick="closeTaskModal()">
+Cancel
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
